@@ -23,7 +23,7 @@ jobs:
         uses: ./
       - name: Check installation
         run: |
-          ./scripts/verify/verify_install.sh /usr/local/bin/gfortran
+          ./scripts/test/test_install.sh /usr/local/bin/gfortran
   test_windows:
     name: Test (Windows)
     runs-on: windows-latest
@@ -35,4 +35,4 @@ jobs:
       - name: Check installation
         shell: pwsh
         run: |
-          ./scripts/verify/verify_install.ps1
+          ./scripts/test/test_install.ps1
