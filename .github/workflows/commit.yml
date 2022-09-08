@@ -1,0 +1,38 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, macos-latest ]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Install gfortran
+        uses: ./
+      - name: Check installation
+        run: |
+          ./scripts/test/test_install.sh /usr/local/bin/gfortran
+  test_windows:
+    name: Test (Windows)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Install gfortran
+        uses: ./
+      - name: Check installation
+        shell: pwsh
+        run: |
+          ./scripts/test/test_install.ps1
