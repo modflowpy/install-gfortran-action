@@ -2,11 +2,11 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
       - develop
   pull_request:
     branches:
-      - master
+      - main
       - develop
 jobs:
   test:
@@ -17,22 +17,22 @@ jobs:
       matrix:
         os: [ ubuntu-latest, macos-latest ]
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Install gfortran
+      - name: Install
         uses: ./
-      - name: Check installation
+      - name: Test
         run: |
-          ./scripts/test/test_install.sh /usr/local/bin/gfortran
+          ./scripts/test/test.sh /usr/local/bin/gfortran
   test_windows:
     name: Test (Windows)
     runs-on: windows-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Install gfortran
+      - name: Install
         uses: ./
-      - name: Check installation
+      - name: Test
         shell: pwsh
         run: |
-          ./scripts/test/test_install.ps1
+          ./scripts/test/test.ps1
