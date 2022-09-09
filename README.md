@@ -13,7 +13,6 @@ An action to install the [GNU Fortran](https://gcc.gnu.org/fortran/) compiler.
   - [Linux](#linux)
   - [MacOS](#macos)
   - [Windows](#windows)
-- [Disclaimer](#disclaimer)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -25,6 +24,8 @@ To use this action, add a step like the following to your workflow:
 - name: Install GNU Fortran
   uses: modflowpy/install-gfortran-action@v0.0.1
 ```
+
+GNU fortran is pre-installed on runners for all three platforms, so there is no need to install it fresh &mdash; this action simply symlinks the compiler executable to a common location on Linux and MacOS and works around a Windows Server 2022 error preventing the default installation from working properly.
 
 ## Install location
 
@@ -39,7 +40,3 @@ On MacOS `gfortran` version 11 is installed to `/usr/local/bin/gfortran-11` and 
 ### Windows
 
 On Windows `gfortran` is installed via Chocolatey.
-
-## Disclaimer
-
-This software is preliminary or provisional and is subject to revision. It is being provided to meet the need for timely best science. The software has not received final approval by the U.S. Geological Survey (USGS). No warranty, expressed or implied, is made by the USGS or the U.S. Government as to the functionality of the software and related material nor shall the fact of release constitute any such warranty. The software is provided on the condition that neither the USGS nor the U.S. Government shall be held liable for any damages resulting from the authorized or unauthorized use of the software.
