@@ -22,7 +22,7 @@ To use this action, add a step like the following to your workflow:
 
 ```yaml
 - name: Install GNU Fortran
-  uses: modflowpy/install-gfortran-action@v0.0.1
+  uses: modflowpy/install-gfortran-action@v1
 ```
 
 GNU fortran is pre-installed on runners for all three platforms, so there is no need to install it fresh &mdash; this action simply symlinks the compiler executable to a common location on Linux and MacOS and works around a Windows Server 2022 error preventing the default installation from working properly.

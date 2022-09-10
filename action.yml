@@ -19,11 +19,15 @@ runs:
         sudo ln -fs /usr/local/bin/gcc-11 /usr/local/bin/gcc
         sudo ln -fs /usr/local/bin/g++-11 /usr/local/bin/g++
 
-    - name: Workaround for windows-2022 v20220626.1 gfortran executable run failures
+    - name: Workaround v20220626.1 gfortran executable run failures (Windows)
       if: runner.os == 'Windows'
       shell: bash
       run: |
-        scripts/install/link-gfortranlib5.sh
+        FCDIR=/c/ProgramData/Chocolatey/bin
+        LNDIR=/c/ProgramData/Chocolatey/lib/mingw/tools/install/mingw64/bin
+        if [ -d "$FCDIR" ] && [ -f "$LNDIR/libgfortran-5.dll" ] && [ ! -f "$FCDIR/libgfortran-5.dll" ]; then
+            ln -s "$LNDIR/libgfortran-5.dll" "$FCDIR/libgfortran-5.dll"
+        fi
 
     - name: Print GNU compiler versions
       if: runner.os != 'Windows'
