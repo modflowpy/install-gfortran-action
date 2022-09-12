@@ -23,7 +23,7 @@ else
   exit 1
 fi
 
-gfortran scripts/test/hw.f90 -o hw
+gfortran test/hw.f90 -o hw
 echo "Compile succeeded"
 
 output=$(./hw '2>&1')

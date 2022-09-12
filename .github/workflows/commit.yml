@@ -23,7 +23,7 @@ jobs:
         uses: ./
       - name: Test
         run: |
-          ./scripts/test/test.sh /usr/local/bin/gfortran
+          ./test/test.sh /usr/local/bin/gfortran
   test_windows:
     name: Test (Windows)
     runs-on: windows-latest
@@ -35,4 +35,4 @@ jobs:
       - name: Test
         shell: pwsh
         run: |
-          ./scripts/test/test.ps1
+          ./test/test.ps1
