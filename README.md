@@ -1,6 +1,6 @@
 # install-gfortran-action
 
-[![CI](https://github.com/modflowpy/install-gfortran-action/actions/workflows/commit.yml/badge.svg?branch=develop)](https://github.com/modflowpy/install-gfortran-action/actions/workflows/commit.yml)
+[![CI](https://github.com/modflowpy/install-gfortran-action/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/modflowpy/install-gfortran-action/actions/workflows/ci.yml)
 
 An action to install the [GNU Fortran](https://gcc.gnu.org/fortran/) compiler.
 

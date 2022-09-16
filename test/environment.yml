@@ -1,0 +1,14 @@
+name: test
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - numpy
+  - meson!=0.63.0
+  - ninja
+  - pip
+  - pip:
+      - git+https://github.com/modflowpy/flopy.git
+      - git+https://github.com/modflowpy/pymake.git
