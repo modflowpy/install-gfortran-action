@@ -1,0 +1,7 @@
+requests
+appdirs
+numpy
+meson!=0.63.0
+ninja
+https://github.com/modflowpy/flopy/zipball/develop
+https://github.com/modflowpy/pymake/zipball/master
