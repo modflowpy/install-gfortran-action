@@ -1,5 +1,6 @@
 # install-gfortran-action
 
+[![GitHub tag](https://img.shields.io/github/tag/modflowpy/install-gfortran-action.svg)](https://github.com/modflowpy/install-gfortran-action/tags/latest)
 [![CI](https://github.com/modflowpy/install-gfortran-action/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/modflowpy/install-gfortran-action/actions/workflows/ci.yml)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
