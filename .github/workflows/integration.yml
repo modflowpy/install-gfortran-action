@@ -1,5 +1,17 @@
 name: MODFLOW 6 integration testing
 on:
+  push:
+    branches:
+      - main
+      - develop*
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths-ignore:
+      - '**.md'
   schedule:
     - cron: '0 6 * * *' # run at 6 AM UTC every day
 jobs:
