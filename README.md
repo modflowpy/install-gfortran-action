@@ -2,7 +2,7 @@
 
 [![GitHub tag](https://img.shields.io/github/tag/modflowpy/install-gfortran-action.svg)](https://github.com/modflowpy/install-gfortran-action/tags/latest)
 [![CI](https://github.com/modflowpy/install-gfortran-action/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/modflowpy/install-gfortran-action/actions/workflows/ci.yml)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
 An action to setup the [GNU Fortran](https://gcc.gnu.org/fortran/) compiler.
 
