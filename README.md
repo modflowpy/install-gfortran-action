@@ -6,12 +6,7 @@
 
 An action to setup the [GNU Fortran](https://gcc.gnu.org/fortran/) compiler.
 
-**Note:** [`awvwgk/setup-fortran`](https://github.com/awvwgk/setup-fortran) is recommended for most use cases as it:
-
-- supports a range of GNU compiler toolchain versions
-- tests runner/version compatibility daily
-
-This action has one advantage, however: nothing new is installed to the runner, precluding transient network errors.
+**Note:** Maintenance of this action will cease in 2024. If the GCC preinstalled on runner images does not meet your needs, [`fortran-lang/setup-fortran`](https://github.com/fortran-lang/setup-fortran) is recommended.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->

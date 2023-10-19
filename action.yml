@@ -3,6 +3,18 @@ description: Install & cache GNU Fortran
 runs:
   using: composite
   steps:
+    - name: Migration warning
+      shell: bash
+      run: |
+        echo "WARNING: This action will be archived on 01/01/24."
+        echo "Use fortran-lang/setup-fortran instead (https://github.com/fortran-lang/setup-fortran)."
+
+    - name: Migration brownout
+      uses: wpbonelli/schedule-outage@v1
+      with:
+        probability: 0.1
+        message: "This action will be archived on 01/01/24. Use fortran-lang/setup-fortran instead (https://github.com/fortran-lang/setup-fortran)."
+
     - name: Symlink to gfortran (Linux)
       if: runner.os == 'Linux'
       shell: bash
